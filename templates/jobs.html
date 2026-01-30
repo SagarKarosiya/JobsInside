@@ -29,15 +29,15 @@
                 <option value="3-5">3–5 Years</option>
             </select> -->
 
-            <input type="number" name="min_salary" placeholder="Min Salary">
-            <input type="number" name="max_salary" placeholder="Max Salary">
+<!--            <input type="text" name="skills" placeholder="skills">
+                <input type="text" name="job_category" placeholder="job_category">   Disabled  by Sagar     -->
 
             <button type="submit">Apply Filters</button>
 
         </form>
     </aside>
 
-    <!-- JOB LIST -->
+    <!-- JOB LIST   Enable by Sagar -->
     <section class="jobs-section">
         <div class="job-grid">
             {% for job in jobs %}
@@ -61,7 +61,7 @@
 </main>
 
 
-    <!-- JOB GRID 
+    <!-- JOB GRID   Disabled  By Sagar
     <div class="job-grid">
         {% for job in jobs %}
         <div class="job-card">
@@ -81,19 +81,6 @@
 </main>  -->
 
 
-<form method="get" class="filter-bar">
-
-    <input type="text" name="keyword" placeholder="Search jobs, skills, company">
-
-    <input type="text" name="location" placeholder="Location">
-
-    
-
-    <input type="number" name="min_salary" placeholder="Min Salary">
-
-    <input type="number" name="max_salary" placeholder="Max Salary">
-
-    <button type="submit">Search</button>
 
 </form>
 <!-- Description -->
