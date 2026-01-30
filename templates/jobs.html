@@ -45,7 +45,9 @@
                 <h3>{{ job['job_title'] }}</h3>
                 <p class="company">{{ job['company'] }}</p>
                 <p class="location">{{ job['location'] }}</p>
-                <p class="salary">₹{{ job['salary_min'] }} - ₹{{ job['salary_max'] }}</p>
+                <p class="skills">{{ job['skills'] }} </p>
+                <p class="job_category">{{ job['job_category']}} </p>
+                <b>    </b>
                 <a href="/maintenance" class="view-btn">
     View Details
 </a>
@@ -66,7 +68,8 @@
             <h3>{{ job['job_title'] }}</h3>
             <p><strong>{{ job['company'] }}</strong></p>
             <p>{{ job['location'] }}</p>
-            <p>₹{{ job['salary_min'] }} - ₹{{ job['salary_max'] }}</p>
+            <p>{{ job['skills'] }}</p>
+            <p>{{ job['job_category']}}</p>
             <a href="/maintenance" class="view-btn">
     View Details
 </a>
