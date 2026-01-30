@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/teststyle.css') }}">
+<header class="jobs-header">
+    <div class="header-left">
+        <a href="/" class="home-btn">🏠 Home</a>
+    </div>
+
+    <div class="header-center">
+        <h1>Job Exploration</h1>
+        <p>Discover opportunities & insights tailored for you</p>
+    </div>
+</header>
+
+<main class="jobs-layout">
+
+    <!-- FILTER SIDEBAR -->
+    <aside class="filter-sidebar">
+        <form method="get" class="filter-form">
+
+            <h3>Filter Jobs</h3>
+
+            <input type="text" name="keyword" placeholder="Job, skill, company">
+
+            <input type="text" name="location" placeholder="Location">
+
+ <!--           <select name="experience"> 
+                <option value="">Experience</option> >
+                <option value="Fresher">Fresher</option>
+                <option value="1-3">1–3 Years</option>
+                <option value="3-5">3–5 Years</option>
+            </select> -->
+
+            <input type="number" name="min_salary" placeholder="Min Salary">
+            <input type="number" name="max_salary" placeholder="Max Salary">
+
+            <button type="submit">Apply Filters</button>
+
+        </form>
+    </aside>
+
+    <!-- JOB LIST -->
+    <section class="jobs-section">
+        <div class="job-grid">
+            {% for job in jobs %}
+            <div class="job-card">
+                <h3>{{ job['job_title'] }}</h3>
+                <p class="company">{{ job['company'] }}</p>
+                <p class="location">{{ job['location'] }}</p>
+                <p class="salary">₹{{ job['salary_min'] }} - ₹{{ job['salary_max'] }}</p>
+                <a href="/maintenance" class="view-btn">
+    View Details
+</a>
+
+
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+</main>
+
+
+    <!-- JOB GRID -->
+    <div class="job-grid">
+        {% for job in jobs %}
+        <div class="job-card">
+            <h3>{{ job['job_title'] }}</h3>
+            <p><strong>{{ job['company'] }}</strong></p>
+            <p>{{ job['location'] }}</p>
+            <p>₹{{ job['salary_min'] }} - ₹{{ job['salary_max'] }}</p>
+            <a href="/maintenance" class="view-btn">
+    View Details
+</a>
+
+        </div>
+        {% endfor %}
+    </div>
+
+</main>
+
+
+<form method="get" class="filter-bar">
+
+    <input type="text" name="keyword" placeholder="Search jobs, skills, company">
+
+    <input type="text" name="location" placeholder="Location">
+
+    
+
+    <input type="number" name="min_salary" placeholder="Min Salary">
+
+    <input type="number" name="max_salary" placeholder="Max Salary">
+
+    <button type="submit">Search</button>
+
+</form>
+<!-- Description -->
+<div class="about-footer-text">
+    <p>
+        Evoastra Group - D Project is a Python-based web application designed
+        to analyze job market data and help students and professionals
+        make informed career decisions.
+    </p>
+</div>
+
+<footer>© 2026 Sagar Karosiya</footer>

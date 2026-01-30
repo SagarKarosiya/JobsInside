@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ job.job_title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="job-card" style="max-width:800px;margin:40px auto;">
+    <h1>{{ job.job_title }}</h1>
+    <h3>{{ job.company }}</h3>
+
+    <p><b>Location:</b> {{ job.location }}</p>
+    <p><b>Experience:</b> {{ job.experience }}</p>
+    <p><b>Salary:</b> ₹{{ job.salary_min }} – ₹{{ job.salary_max }}</p>
+
+    <h4>Skills Required</h4>
+    <div class="job-tags">
+        {% for skill in job.skills.split('|') %}
+            <span>{{ skill }}</span>
+        {% endfor %}
+    </div>
+
+    <br>
+    <a href="{{ job.apply_url }}" class="apply-btn" target="_blank">Apply Now</a> 
+</div>
+
+</body>
+</html>

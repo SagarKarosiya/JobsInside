@@ -1,0 +1,591 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: #e5e7eb; /* SAME AS FOOTER */
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+/* ===============================
+   HERO SECTION (HOME)
+================================ */
+.hero {
+    min-height: 100vh;
+    background: radial-gradient(circle at top,
+        #0f172a,
+        #020617
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 14px;
+}
+
+.hero h1 span {
+    color: #1abc9c;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 1.15rem;
+    color: #cbd5f5;
+    margin-bottom: 30px;
+}
+
+/* ===============================
+   NAVIGATION BUTTONS
+================================ */
+.nav-buttons {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    padding: 14px 36px;
+    border-radius: 30px;
+    background: #1abc9c;
+    color: #ffffff;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.nav-buttons a:hover {
+    background: #16a085;
+    transform: translateY(-4px);
+}
+
+/* ===============================
+   PAGE WRAPPER
+================================ */
+.content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* ===============================
+   FILTER BAR
+================================ */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.filter-bar input,
+.filter-bar select,
+.filter-bar button {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.filter-bar button {
+    background: #1abc9c;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-bar button:hover {
+    background: #16a085;
+}
+
+/* ===============================
+   JOB GRID
+================================ */
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 26px;
+}
+
+.job-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-8px);
+}
+
+.job-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.job-card p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 6px;
+}
+
+.job-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #1abc9c;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.job-card a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   JOB DETAIL
+================================ */
+.job-detail {
+    background: #ffffff;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 34px;
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.1);
+}
+
+.job-detail h2 {
+    margin-bottom: 18px;
+}
+
+.job-detail p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.job-detail a {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 14px 28px;
+    background: #1abc9c;
+    color: #ffffff;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.job-detail a:hover {
+    background: #16a085;
+}
+
+/* ===============================
+   ABOUT / TEAM
+================================ */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 26px;
+}
+
+.team-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.team-card img {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 14px;
+}
+
+.team-card h3 {
+    margin-bottom: 6px;
+}
+
+.team-card .role {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.team-card a {
+    color: #1abc9c;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+/* ===============================
+   LINKEDIN POPUP
+================================ */
+.popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #020617;
+    color: #ffffff;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    z-index: 999;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===============================
+   ABOUT FOOTER TEXT
+================================ */
+.about-footer-text {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.about-footer-text p {
+    font-size: 0.8rem;
+    color: #6b7280;
+    max-width: 640px;
+    margin: auto;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+    background: #e5e7eb;
+    color: #374151;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.85rem;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    background: #f3f2ef;
+    color: #1d1d1f;
+}
+
+/* ===== HEADER ===== */
+.top-bar {
+    background: #ffffff;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0a66c2;
+}
+
+.logo span {
+    color: #000;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 25px;
+}
+
+/* ===== FILTER PANEL ===== */
+.filters {
+    width: 260px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+    border: 1px solid #ddd;
+}
+
+.filters h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.filters label {
+    display: block;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.filters input,
+.filters select {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.salary-text {
+    font-size: 12px;
+    color: #555;
+}
+
+.apply-filter {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #0a66c2;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===== JOB FEED ===== */
+.job-feed {
+    flex: 1;
+}
+
+/* ===== JOB CARD ===== */
+.job-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    transition: box-shadow 0.2s;
+}
+
+.job-card:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.job-header h2 {
+    font-size: 18px;
+    color: #0a66c2;
+}
+
+.company {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+.job-meta {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+    font-size: 13px;
+    color: #555;
+}
+
+.job-desc {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+/* ===== TAGS ===== */
+.job-tags span {
+    display: inline-block;
+    background: #eef3f8;
+    color: #0a66c2;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 6px;
+}
+
+/* ===== ACTIONS ===== */
+.job-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn,
+.apply-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.view-btn {
+    border: 1px solid #0a66c2;
+    color: #0a66c2;
+}
+
+.apply-btn {
+    background: #0a66c2;
+    color: white;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.filter-bar input,
+.filter-bar select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.filter-bar button {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.filter-bar button:hover {
+    background: #004182;
+}
+/* =====================
+   JOB EXPLORATION HEADER
+===================== */
+.jobs-header {
+    background: #ffffff;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.header-center {
+    flex: 2;
+    text-align: center;
+}
+
+.header-center h1 {
+    font-size: 1.8rem;
+    color: #0a66c2;
+    margin-bottom: 4px;
+}
+
+.header-center p {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Home Button */
+.home-btn {
+    text-decoration: none;
+    padding: 8px 14px;
+    background: #0a66c2;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.home-btn:hover {
+    background: #004182;
+}
+
+/* Page Container */
+.jobs-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+/* =====================
+   MAINTENANCE PAGE
+===================== */
+.maintenance-page {
+    min-height: 100vh;
+    background: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.maintenance-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.maintenance-page p {
+    font-size: 1rem;
+    color: #374151;
+}
+
+.redirect-note {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Loader animation */
+.loader {
+    margin: 25px 0;
+    width: 45px;
+    height: 45px;
+    border: 5px solid #d1d5db;
+    border-top: 5px solid #3bf6c1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
