@@ -22,10 +22,10 @@ through data-driven insights</br>
 HTML5, CSS3, responsive grid layout,JavaScript( minimal )
 
 # Backend
-Python 3 with Flask web framework
+Python 3 with Flask web framework   
 
 # Development
-VS Code, Git, and GitHub for version control
+VS Code, Git, and GitHub for version control ,Render (for Deploy)
 
 # System Data Flow :
 <b>CSV File </b> (for Dataset) >> <b> Flask </b> (backend) >> <b>HTML Templates </b>(Web Pages) >> <b> Website UI</b>
