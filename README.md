@@ -6,7 +6,7 @@ through data-driven insights</br>
 
 # Dual-Module Architecture
 # Website Module                                           Dashboard Module
-1.Job listing and exploration                               1. Job category analysis
-2.Advanced search and filters                               2. Skills demand visualization
-3.Salary and experience categorization                      3. Year-wise distribution
-4.Clean, professional UI                                    4. Company and country insights
+<br>1.Job listing and exploration </br>                              1. Job category analysis
+<br?2.Advanced search and filters  </br>                             2. Skills demand visualization
+<br>3.Salary and experience categorization</br>                      3. Year-wise distribution
+<br>4.Clean, professional UI  </br>                                  4. Company and country insights
