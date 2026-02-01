@@ -19,7 +19,7 @@ through data-driven insights</br>
 
  # Technology Stack :
 # Frontend
-HTML5, CSS3, responsive grid layout, minimal JavaScript
+HTML5, CSS3, responsive grid layout,JavaScript( minimal )
 
 # Backend
 Python 3 with Flask web framework
