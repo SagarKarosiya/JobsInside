@@ -11,7 +11,7 @@ through data-driven insights</br>
 <br>3.Salary and experience categorization</br>          
 <br>4.Clean, professional UI  </br>                      
 
-#   b. Dashboard Module :
+#   b. Dashboard Module 
 <br> 1. Job category analysis </br>
  <br>2. Skills demand visualization </br>
  <br>3. Year-wise distribution    </br>
@@ -28,4 +28,17 @@ Python 3 with Flask web framework
 VS Code, Git, and GitHub for version control
 
 # System Data Flow :
-CSV File (for Dataset) >> <b> Flask </b> (backend) >> HTML Templates (Web Pages) >> Website UI
+<b>CSV File </b> (for Dataset) >> <b> Flask </b> (backend) >> <b>HTML Templates </b>(Web Pages) >> <b> Website UI</b>
+
+# Dynamic Job Cards
+<br>Browse opportunities with comprehensive 
+details including title, company, location, 
+salary, and experience requirements.</br>
+# Advanced Filtering
+<br>Job title and location search</br>
+<br>Category-based filtering</br>
+<br>Experience level selection</br>
+<br>Salary range customization</br>
+
+Developer :
+<b> Sagar Karsoiya </b>
